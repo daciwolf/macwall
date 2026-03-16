@@ -1,6 +1,6 @@
 # MacWall
 
-[![Download Experimental DMG](https://img.shields.io/badge/Download-Experimental%20DMG-black?style=for-the-badge&logo=apple)](https://github.com/daciwolf/macwall/releases/latest/download/MacWall-experimental.dmg)
+[![Download Experimental DMG](https://img.shields.io/badge/Download-Experimental%20DMG-black?style=for-the-badge&logo=apple)](https://github.com/daciwolf/macwall/raw/main/MacWall-experimental.dmg)
 
 > Warning
 >
