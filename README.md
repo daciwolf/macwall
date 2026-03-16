@@ -1,6 +1,6 @@
 # MacWall
 
-[![Download Experimental DMG](https://img.shields.io/badge/Download-Experimental%20DMG-black?style=for-the-badge&logo=apple)](https://github.com/daciwolf/macwall/raw/main/MacWall-experimental.dmg)
+[![Download Experimental DMG](https://img.shields.io/badge/Download-Experimental%20DMG-black?style=for-the-badge&logo=apple)](https://github.com/daciwolf/macwall/raw/main/MacWall-experimental-20260315.dmg)
 
 > Warning
 >
@@ -55,7 +55,7 @@ I got annoyed that there was no free Wallpaper Engine alternative for macOS, so 
 - `zsh scripts/build_saver.sh`
   - builds the experimental screen saver bundle for lock-screen use
 - `zsh scripts/build_dmg.sh`
-  - builds the app, bundles the screen saver, and creates `MacWall-experimental.dmg` at the repository root
+  - builds the app, bundles the screen saver, and creates `MacWall-experimental-20260315.dmg` at the repository root
 
 ## Test Flow
 
