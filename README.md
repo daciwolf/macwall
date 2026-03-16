@@ -2,6 +2,14 @@
 
 MacWall is a native macOS wallpaper application in progress, built specifically for Apple desktops instead of being a cross-platform port. The product goal is to let users run high-quality animated wallpapers, manage them per display and Space, and share them with other users through a secure distribution platform.
 
+## Why This Exists
+
+> "Give me 6 hours to write software, and I'll spend the first 4 configuring my desktop. The last 2 are spent on Codex."
+>
+> some Arch Linux user, probably
+
+I got annoyed that there was no free Wallpaper Engine alternative for macOS, so I started building this while studying for finals and playing Marvel Rivals.
+
 ## Product Direction
 
 - Native macOS client built with `Swift`, `SwiftUI`, and targeted `AppKit` integrations where macOS window management requires it.
