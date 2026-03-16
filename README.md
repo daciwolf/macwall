@@ -1,5 +1,9 @@
 # MacWall
 
+[![Download Experimental DMG](https://img.shields.io/badge/Download-Experimental%20DMG-black?style=for-the-badge&logo=apple)](https://github.com/daciwolf/macwall/releases/latest/download/MacWall-experimental.dmg)
+
+Experimental build. I guarantee nothing.
+
 MacWall is a native macOS wallpaper application in progress, built specifically for Apple desktops instead of being a cross-platform port. The product goal is to let users run high-quality animated wallpapers, manage them per display and Space, and share them with other users through a secure distribution platform.
 
 ## Why This Exists
