@@ -2,7 +2,9 @@
 
 [![Download Experimental DMG](https://img.shields.io/badge/Download-Experimental%20DMG-black?style=for-the-badge&logo=apple)](https://github.com/daciwolf/macwall/releases/latest/download/MacWall-experimental.dmg)
 
-Experimental build. I guarantee nothing.
+> Warning
+>
+> This is experimental software provided on an `as is` basis, with no warranty or guarantee of safety, fitness, or reliability. MacWall can modify macOS wallpaper-related system files and preferences, including files under `~/Library/Application Support/com.apple.wallpaper/aerials/` and the `com.apple.wallpaper` `SystemWallpaperURL` setting. You should be extremely cautious before installing or running it, especially on a primary machine or any system you are not prepared to repair manually.
 
 MacWall is a native macOS wallpaper application in progress, built specifically for Apple desktops instead of being a cross-platform port. The product goal is to let users run high-quality animated wallpapers, manage them per display and Space, and share them with other users through a secure distribution platform.
 
