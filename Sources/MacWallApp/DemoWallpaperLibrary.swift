@@ -1,111 +1,115 @@
+import Foundation
 import MacWallCore
 
 enum DemoWallpaperLibrary {
     static let entries: [WallpaperLibraryEntry] = [
-        WallpaperLibraryEntry(
-            manifest: WallpaperManifest(
-                id: "aurora-swell",
-                version: 1,
-                title: "Aurora Swell",
-                summary: "Soft gradient currents built for low-distraction desktop motion.",
-                creator: WallpaperManifest.Creator(id: "studio.macwall", displayName: "MacWall Studio"),
-                tags: ["gradient", "ambient", "calm"],
-                category: "Featured",
-                contentRating: .general,
-                video: WallpaperManifest.VideoAsset(
-                    fileName: "aurora-swell.mp4",
-                    previewImageFileName: "aurora-swell.jpg",
-                    container: .mp4,
-                    codec: .hevc,
-                    width: 3840,
-                    height: 2160,
-                    frameRate: 30,
-                    durationSeconds: 45
-                ),
-                checksums: [
-                    WallpaperManifest.Checksum(
-                        fileName: "aurora-swell.mp4",
-                        sha256: String(repeating: "a", count: 64)
-                    ),
-                    WallpaperManifest.Checksum(
-                        fileName: "aurora-swell.jpg",
-                        sha256: String(repeating: "b", count: 64)
-                    ),
-                ]
-            ),
-            videoURL: nil,
-            previewImageURL: nil,
-            source: .bundled
+        makeEntry(
+            id: "vtf5-uci-rocket-project",
+            title: "VTF5 UCI Rocket Project",
+            summary: "Default flight footage courtesy of UCI Rocket Project.",
+            tags: ["rocket", "vtf5", "uci", "flight"],
+            videoFileName: "VTF5UCIRocketProject.mov",
+            previewFileName: "VTF5UCIRocketProject.jpg",
+            codec: .h264,
+            width: 3840,
+            height: 2160,
+            frameRate: 23.976,
+            durationSeconds: 36.536,
+            videoSHA256: "6897bff2ad02c7d1823cf36aa88c6b578540a31010d6fa4265e6b8b986bd1da2",
+            previewSHA256: "52b2bbddb61b088a44198aaa9236deaa6d4cb2940a708a4ac8f75b8dfe836204"
         ),
-        WallpaperLibraryEntry(
-            manifest: WallpaperManifest(
-                id: "night-grid",
-                version: 1,
-                title: "Night Grid",
-                summary: "Minimal motion lines designed for multi-display setups.",
-                creator: WallpaperManifest.Creator(id: "grid-labs", displayName: "Grid Labs"),
-                tags: ["neon", "grid", "minimal"],
-                category: "Technology",
-                contentRating: .general,
-                video: WallpaperManifest.VideoAsset(
-                    fileName: "night-grid.mov",
-                    previewImageFileName: "night-grid.png",
-                    container: .mov,
-                    codec: .h264,
-                    width: 2560,
-                    height: 1440,
-                    frameRate: 60,
-                    durationSeconds: 20
-                ),
-                checksums: [
-                    WallpaperManifest.Checksum(
-                        fileName: "night-grid.mov",
-                        sha256: String(repeating: "c", count: 64)
-                    ),
-                    WallpaperManifest.Checksum(
-                        fileName: "night-grid.png",
-                        sha256: String(repeating: "d", count: 64)
-                    ),
-                ]
-            ),
-            videoURL: nil,
-            previewImageURL: nil,
-            source: .bundled
-        ),
-        WallpaperLibraryEntry(
-            manifest: WallpaperManifest(
-                id: "forest-rain",
-                version: 1,
-                title: "Forest Rain",
-                summary: "Muted rain motion with gentle pacing for focused work.",
-                creator: WallpaperManifest.Creator(id: "northlight", displayName: "Northlight"),
-                tags: ["nature", "rain", "focus"],
-                category: "Nature",
-                contentRating: .general,
-                video: WallpaperManifest.VideoAsset(
-                    fileName: "forest-rain.mp4",
-                    previewImageFileName: "forest-rain.jpg",
-                    container: .mp4,
-                    codec: .hevc,
-                    width: 1920,
-                    height: 1080,
-                    frameRate: 24,
-                    durationSeconds: 30
-                ),
-                checksums: [
-                    WallpaperManifest.Checksum(
-                        fileName: "forest-rain.mp4",
-                        sha256: String(repeating: "e", count: 64)
-                    ),
-                    WallpaperManifest.Checksum(
-                        fileName: "forest-rain.jpg",
-                        sha256: String(repeating: "f", count: 64)
-                    ),
-                ]
-            ),
-            videoURL: nil,
-            previewImageURL: nil,
-            source: .bundled
+        makeEntry(
+            id: "vtf5-uci-rocket-project-color-grade",
+            title: "VTF5 UCI Rocket Project Color Grade",
+            summary: "Color graded default flight footage courtesy of UCI Rocket Project.",
+            tags: ["rocket", "vtf5", "uci", "flight", "color-grade"],
+            videoFileName: "VTF5UCIRocketProjectColorGrade.mov",
+            previewFileName: "VTF5UCIRocketProjectColorGrade.jpg",
+            codec: .hevc,
+            width: 3840,
+            height: 2160,
+            frameRate: 23.976,
+            durationSeconds: 36.495,
+            videoSHA256: "f8d174d3903e9d131f1bbed53b8b36b0adff618a5a79b003c3fd3c2eacc3be91",
+            previewSHA256: "4cd26ae5d83d8b4594dadc979d972116976753222e2f87014302bb249be4852e"
         ),
     ]
+
+    private static func makeEntry(
+        id: String,
+        title: String,
+        summary: String,
+        tags: [String],
+        videoFileName: String,
+        previewFileName: String,
+        codec: WallpaperManifest.VideoAsset.Codec,
+        width: Int,
+        height: Int,
+        frameRate: Double,
+        durationSeconds: Double,
+        videoSHA256: String,
+        previewSHA256: String
+    ) -> WallpaperLibraryEntry {
+        WallpaperLibraryEntry(
+            manifest: WallpaperManifest(
+                id: id,
+                version: 1,
+                title: title,
+                summary: summary,
+                creator: WallpaperManifest.Creator(
+                    id: "uci-rocket-project",
+                    displayName: "UCI Rocket Project"
+                ),
+                tags: tags,
+                category: "Aerospace",
+                contentRating: .general,
+                video: WallpaperManifest.VideoAsset(
+                    fileName: videoFileName,
+                    previewImageFileName: previewFileName,
+                    container: .mov,
+                    codec: codec,
+                    width: width,
+                    height: height,
+                    frameRate: frameRate,
+                    durationSeconds: durationSeconds
+                ),
+                checksums: [
+                    WallpaperManifest.Checksum(
+                        fileName: videoFileName,
+                        sha256: videoSHA256
+                    ),
+                    WallpaperManifest.Checksum(
+                        fileName: previewFileName,
+                        sha256: previewSHA256
+                    ),
+                ]
+            ),
+            videoURL: bundledWallpaperURL(fileName: videoFileName),
+            previewImageURL: bundledWallpaperURL(fileName: previewFileName),
+            source: .bundled
+        )
+    }
+
+    private static func bundledWallpaperURL(fileName: String) -> URL? {
+        let fileManager = FileManager.default
+
+        if let packagedResourceURL = Bundle.main.resourceURL?
+            .appendingPathComponent("BundledWallpapers", isDirectory: true)
+            .appendingPathComponent(fileName, isDirectory: false),
+           fileManager.fileExists(atPath: packagedResourceURL.path) {
+            return packagedResourceURL
+        }
+
+        let sourceResourceURL = URL(fileURLWithPath: #filePath)
+            .deletingLastPathComponent()
+            .appendingPathComponent("Resources", isDirectory: true)
+            .appendingPathComponent("BundledWallpapers", isDirectory: true)
+            .appendingPathComponent(fileName, isDirectory: false)
+
+        guard fileManager.fileExists(atPath: sourceResourceURL.path) else {
+            return nil
+        }
+
+        return sourceResourceURL
+    }
 }

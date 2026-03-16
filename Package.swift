@@ -22,7 +22,8 @@ let package = Package(
         ),
         .executableTarget(
             name: "MacWallApp",
-            dependencies: ["MacWallCore"]
+            dependencies: ["MacWallCore"],
+            exclude: ["Resources"]
         ),
     ]
 )

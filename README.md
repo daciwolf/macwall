@@ -33,6 +33,7 @@ I got annoyed that there was no free Wallpaper Engine alternative for macOS, so 
 
 ## Current Implementation
 
+- ships with two bundled default wallpapers based on VTF5 footage, credited to `UCI Rocket Project`
 - native SwiftUI app prototype with local video import, looping preview playback, and experimental desktop-level wallpaper windows
 - per-display assignment logic with playback policy controls for battery, thermal pressure, Low Power Mode, and fullscreen conditions
 - experimental lock-screen path via `MacWallScreenSaver.saver`, which reads the selected wallpaper from `~/Library/Application Support/MacWall/shared-state.json`

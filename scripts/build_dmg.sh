@@ -11,6 +11,7 @@ macos_root="$contents_root/MacOS"
 dmg_staging_root="$dist_root/dmg-root"
 dmg_path="$repo_root/MacWall-experimental.dmg"
 saver_bundle_root="$dist_root/MacWallScreenSaver.saver"
+bundled_wallpapers_root="$repo_root/Sources/MacWallApp/Resources/BundledWallpapers"
 
 swift_build_env=(
   /usr/bin/env
@@ -33,6 +34,7 @@ app_binary_path="$("${swift_build_env[@]}" /usr/bin/swift build --disable-sandbo
 
 /bin/cp "$repo_root/packaging/MacWall-Info.plist" "$contents_root/Info.plist"
 /bin/cp "$app_binary_path" "$macos_root/MacWallApp"
+/bin/cp -R "$bundled_wallpapers_root" "$contents_root/Resources/BundledWallpapers"
 /bin/cp -R "$saver_bundle_root" "$contents_root/Resources/MacWallScreenSaver.saver"
 /bin/chmod +x "$macos_root/MacWallApp"
 
